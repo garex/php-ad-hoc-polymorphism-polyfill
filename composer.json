@@ -1,0 +1,15 @@
+{
+    "name": "garex/php-ad-hoc-polymorphism-polyfill",
+    "description": "Polyfill of missing in PHP ad-hoc polymorphism",
+    "type": "lib",
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ustimenko Alexander",
+            "email": "ustimenko.alexander@gmail.com"
+        }
+    ]
+}
