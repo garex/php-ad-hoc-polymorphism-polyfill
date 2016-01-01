@@ -36,7 +36,7 @@ class PolycallTest extends PHPUnit_Framework_TestCase
         return 'ArrayIterator';
     }
 
-    private function callMe1(DirectoryIterator $i)
+    protected function callMe1(DirectoryIterator $i)
     {
         return 'DirectoryIterator';
     }
