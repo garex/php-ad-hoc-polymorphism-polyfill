@@ -24,7 +24,9 @@ class PolycallTest extends PHPUnit_Framework_TestCase
     {
         $_p = (new Polycall($this))
             ->on(ArrayIterator::class)->to('callMe0')
-            ->on(DirectoryIterator::class)->to('callMe1')
+            ->on(DirectoryIterator::class)->to(function($i) {
+                return $this->callMe1($i);
+            })
         ;
         return $_p->go(func_get_args());
     }
@@ -34,7 +36,7 @@ class PolycallTest extends PHPUnit_Framework_TestCase
         return 'ArrayIterator';
     }
 
-    public function callMe1(DirectoryIterator $i)
+    private function callMe1(DirectoryIterator $i)
     {
         return 'DirectoryIterator';
     }
