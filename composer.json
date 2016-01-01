@@ -4,7 +4,8 @@
     "type": "lib",
     "autoload": {
         "psr-4": {
-            "Garex\\Adhoc2p\\": "src/"
+            "Garex\\Adhoc2p\\": "src/",
+            "": "tests/"
         }
     },
     "require-dev": {

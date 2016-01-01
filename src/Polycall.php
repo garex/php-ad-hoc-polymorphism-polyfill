@@ -15,8 +15,13 @@ class Polycall
 
     public function on()
     {
-        $this->ons[] = func_get_args();
+        $this->onArray(func_get_args());
         return $this;
+    }
+
+    protected function onArray(array $arguments)
+    {
+        $this->ons[] = $arguments;
     }
 
     public function to($method)
